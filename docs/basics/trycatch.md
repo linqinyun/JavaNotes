@@ -51,8 +51,18 @@ System.exit(status);
 ```
 - ``return``的使用  
 finally语句中使用return，会强制返回return语句的内容
-test
 ## 使用throw和throws实现异常
+- 如果一个方法可能会出现异常，当没有能力处理这种异常，可以在方法声明处用throws子句来声明抛出异常
+- throws语句用在方法定义时声明该方法要抛出的异常类型。
+```
+public void method() throws Exception1,Exception2,....ExceptionN{
+  //可能产生异常的代码
+}
+```
+- 当方法抛出异常列表中的异常时，方法将不对这些类型及其子类类型的异常进行处理，而是抛出调用该方法的方法，由它去处理
+- 通过throws抛出异常时，针对可能出现的多种异常情况，解决方案：
+    1. throws后面接多个异常类型，中间用逗号分隔
+    2. throws后面接Exception
 ## 自定义异常
 ## 异常链
 ## 总结
