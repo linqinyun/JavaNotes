@@ -27,7 +27,7 @@
 
 1. [Java异常](./exception.md)
 2. [Java包装类](./pack.md)
-3. Java字符串
+3. [Java字符串](./string.md)
 4. Java集合
 5. Java集合排序
 6. Java泛型
