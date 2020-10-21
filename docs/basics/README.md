@@ -29,10 +29,10 @@
 2. [Java包装类](./pack.md)
 3. [Java字符串](./string.md)
 4. [Java集合](./gather.md)
-5. Java集合排序
-6. Java泛型
-7. Java多线程
-8. Java输入输出流
+5. [Java集合排序](./sort.md)
+6. [Java泛型](./genericity.md)
+7. [Java多线程](./thred.md)
+8. [Java输入输出流](./io.md)
 9. 综合案例：播放器
 
 ## Java 入门基础总结
