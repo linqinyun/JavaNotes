@@ -232,4 +232,34 @@ try {
 	```
 	- 其他字符流
 ## 对象的序列化与反序列化
+序列化步骤：  
+1. 创建一个类，继承Serializable接口
+（只有当类继承了Serializable接口才能序列化与反序列化）
+2. 创建该类的对象
+3. 因为ObjectOutputStream()参数为字节流所以要先创建一个字节流的对象
+FileOutputStream fos=new FileOutputStream("imooc.txt");
+4. 创建序列化对象ObjectOutputStream oos=new ObjectOutputStream(fos)
+5. 将一开始创建的对象写入文件  
+oos.writeObject(good1);  
+oos.flush()  
 
+从文件读取对象信息(反序列化)  
+1. FileInputStream fis=new FileInputStream("imooc.txt");
+2. ObjectInputStream ois=new ObjectInputStream(fis)
+3. 调用ois.readObject()方法，因为该方法返回值为object类型所以应该强制转换
+4. Goods goods=(Good)ois.readObject();
+5. 直接输出重写过toString方法的类
+
+同样也可以序列化其他类型  
+
+例  
+写入：  
+oss.writeBoolean(true);  
+读取：  
+System.out.println(ois.readBoolean());  
+
+注：反序列化时应当按照序列化的顺序读取，否则将会报EOFException异常
+因为读取不会分辨特定的类型，第一次写入的类型时GOOD 第二次是boolean。读取时不论用哪种方式都只会先读取GOOD类型，读取的类型和写入的类型不一样就会报错
+
+ObjectInputStream 对象输入流类  
+ObjectOutputStream 对象输出流类  
