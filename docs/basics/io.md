@@ -205,16 +205,16 @@ try {
 			OutputStreamWriter osw = new OutputStreamWriter(fos);
 			int n = 0;
 			char[] cbuf = new char[10];
-//			while((n=isr.read())!=-1) {
-//				System.out.print((char)n);
-//			}
-//			while((n=isr.read(cbuf))!=-1) {
-//				String s = new String(cbuf,0,n);
-//				System.out.print(s);
-//			}
+	//			while((n=isr.read())!=-1) {
+	//				System.out.print((char)n);
+	//			}
+	//			while((n=isr.read(cbuf))!=-1) {
+	//				String s = new String(cbuf,0,n);
+	//				System.out.print(s);
+	//			}
 			while((n=isr.read(cbuf))!=-1) {
 				String s = new String(cbuf,0,n);
-//				osw.write(s);
+	//				osw.write(s);
 				osw.write(cbuf,0,n);
 				osw.flush();
 			}
@@ -229,6 +229,7 @@ try {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	```
 	- 其他字符流
 ## 对象的序列化与反序列化
