@@ -4,7 +4,7 @@
 
 ## [Java 从网页搭建入门JavaWeb](./docs/javaWeb/README.md)
 
-## Java 数据库开发于实战应用
+## [Java 数据库开发于实战应用](./docs/javaSql/README.md)
 
 ## Java SSM到Spring Boot 入门于综合实战
 
