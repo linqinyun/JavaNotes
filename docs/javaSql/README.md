@@ -11,8 +11,8 @@
 ## MyBatis
 1. IDEA入门
 2. Maven入门
-3. 工程模式
-5. MyBatis入门
+3. 工厂模式
+5. [MyBatis入门](./induction.md)
 6. MyBatis进阶
 7. 项目-商品信息管理
 ## Redis与部署
