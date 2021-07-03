@@ -6,7 +6,7 @@
 
 ## [Java 数据库开发于实战应用](./docs/javaSql/README.md)
 
-## Java SSM到Spring Boot 入门于综合实战
+## [Java SSM到Spring Boot 入门于综合实战](./docs/spring/README.md)
 
 ## Java实践项目
 - 文本编辑器
