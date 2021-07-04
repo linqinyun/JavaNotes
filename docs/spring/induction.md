@@ -41,6 +41,34 @@
 
 ## Spring Bean管理
 
+### Spring的工厂类
+### Spring的Bean管理（XML方式）
+#### 三种实例化Bean的方式
+- 使用类构造器实例化（默认无参数）
+- 使用静态工厂方法实例化（简单工厂模式）
+- 使用实例工厂方法实例化（工厂方法模拟）
+### Bean的配置
+- id与name
+  - 一般情况下，装配一个Bean时，通过指定一个id属性作为Bean的名称
+  - id属性在IOC容器中必须时唯一的
+  - 如果Bean的名称中含有特殊字符，就需要使用name属性
+- class
+  - class用于设置一个类的完全路径名称，主要作用是IOC容器生成类的实例
+- scope作用域
+### Spring容器中Bean的生命周期
+Spring初始化bean或销毁bean时，有时需要做一些处理工作，因此spring可以在创建和销毁bean的时候调用bena的两个生命周期方法。
+1. instantiate bean对象实例化
+2. populate properties 封装属性
+3. 如果Bean实现BeanNameAware执行setBeanName
+4. 如果Bean实现BeanFactoryAware或者ApplicationContextAware设置工厂setBeanFactory或者上下文对象setApplicationContext
+5. 如果存在类实现BeanPostProcessor（后处理Bean），执行postProcessBeforeInitialization
+6. 如果Bean实现InitializingBean执行afterPropertiesSet
+7. 调用\<bean init-method="init">指定初始化方法
+8. 如果存在类实现BeanPostProcessor（处理Bean），执行postProcessAfterInitialization
+9. 执行业务处理
+10. 如果Bean实现DisposableBean执行destroy
+11. 调用\<bean destroy-method="customerDestroy">指定销毁方法customerDestroy
+
 ## Spring AOP
 
 ## 基于AspectJ的AOP开发
