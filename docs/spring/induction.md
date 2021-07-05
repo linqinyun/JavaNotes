@@ -68,6 +68,7 @@ Spring初始化bean或销毁bean时，有时需要做一些处理工作，因此
 9. 执行业务处理
 10. 如果Bean实现DisposableBean执行destroy
 11. 调用\<bean destroy-method="customerDestroy">指定销毁方法customerDestroy
+12. 项目使用
 
 ## Spring AOP
 
